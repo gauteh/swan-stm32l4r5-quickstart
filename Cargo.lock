@@ -140,6 +140,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3ab1f00eac22bd18f8e5cae9555f2820b3a0c166b5b556ee3e203746ea6dcf3a"
 dependencies = [
  "cortex-m",
+ "rtt-target",
 ]
 
 [[package]]
@@ -171,6 +172,16 @@ name = "rand_core"
 version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d34f1408f55294453790c48b2f1ebbb1c5b4b7563eb1f418bcfcfdbb06ebb4e7"
+
+[[package]]
+name = "rtt-target"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "065d6058bb1204f51a562a67209e1817cf714759d5cf845aa45c75fa7b0b9d9b"
+dependencies = [
+ "cortex-m",
+ "ufmt-write",
+]
 
 [[package]]
 name = "rustc_version"
@@ -251,6 +262,7 @@ dependencies = [
  "cortex-m",
  "cortex-m-rt",
  "panic-probe",
+ "rtt-target",
  "stm32l4",
  "stm32l4xx-hal",
 ]
@@ -265,6 +277,12 @@ dependencies = [
  "quote",
  "unicode-xid",
 ]
+
+[[package]]
+name = "ufmt-write"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e87a2ed6b42ec5e28cc3b94c09982969e9227600b2e3dcbc1db927a84c06bd69"
 
 [[package]]
 name = "unicode-xid"
