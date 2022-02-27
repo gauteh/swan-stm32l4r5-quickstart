@@ -24,10 +24,11 @@ fn main() -> ! {
     let mut pwr = dp.PWR.constrain(&mut rcc.apb1r1);
 
     // let clocks = rcc.cfgr.hclk(8.MHz()).freeze(&mut flash.acr, &mut pwr);
-    let clocks = rcc.cfgr
-        .sysclk(64.MHz())
-        .pclk1(32.MHz())
-        .freeze(&mut flash.acr, &mut pwr);
+    let clocks = rcc.cfgr.freeze(&mut flash.acr, &mut pwr);
+    // let clocks = rcc.cfgr
+    //     .sysclk(64.MHz())
+    //     .pclk1(32.MHz())
+    //     .freeze(&mut flash.acr, &mut pwr);
 
     let mut gpioe = dp.GPIOE.split(&mut rcc.ahb2);
 
